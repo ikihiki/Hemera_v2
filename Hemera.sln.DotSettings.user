@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=52dd58d7_002D4692_002D44c7_002Dbfda_002D95199177b916/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Parse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C581B43C-9F6D-4192-8428-BB2CE5300804::net9.0::Hemera.Test.Resource.ResoureceKeyTest.Parse&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a1267a00_002D0e31_002D427d_002Dbcf8_002D08937793cdd1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Parse #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C581B43C-9F6D-4192-8428-BB2CE5300804::net9.0::Hemera.Test.Resource.ResoureceKeyTest.Parse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C581B43C-9F6D-4192-8428-BB2CE5300804::net9.0::Hemera.Test.HostSessionTest.Test1&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
