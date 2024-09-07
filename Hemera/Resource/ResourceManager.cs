@@ -54,7 +54,7 @@ public class ResourceManager: IResourceManager
         
     }
     
-    public  IResourceNode LoadResourceNode<T>(string domain, string path) where T : IResourceNode
+    public  IResourceNodeHolder<T> LoadResourceNode<T>(string domain, string path) where T : IResourceNode
     {
         var type = typeof(T);
         var resolvers = nodeResolvers[typeof(T)];
@@ -63,7 +63,7 @@ public class ResourceManager: IResourceManager
         {
             if (resolver.CanResolveNode(key))
             {
-                return resolver.ResolveNode(key);
+                return new ResourceNodeHolder<T>((T)resolver.ResolveNode(key));
             }
         }
         
@@ -94,7 +94,7 @@ public class ResourceManager: IResourceManager
         throw new Exception($"No resolver found for {key}");
     }
     
-    public IStreamResourceNode LoadStreamResourceNode<T>(string domain, string path) where T : IStreamResourceNode
+    public IResourceNodeHolder<T> LoadStreamResourceNode<T>(string domain, string path) where T : IStreamResourceNode
     {
         var type = typeof(T);
         var resolvers = streamResourceResolvers[typeof(T)];
@@ -103,10 +103,13 @@ public class ResourceManager: IResourceManager
         {
             if (resolver.CanResolveNode(key))
             {
-                return resolver.ResolveNode(key);
+                return new ResourceNodeHolder<T>((T) resolver.ResolveNode(key));
             }
         }
         
         throw new Exception($"No resolver found for {key}");
     }
 }
+
+
+

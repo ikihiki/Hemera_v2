@@ -6,12 +6,6 @@ public class StringResourceResolver: IResourceResolver<IStringResourceNode, Stri
 {
     ConcurrentDictionary<ResourceKey, IStringResourceNode> nodes = new();
     
-    
-    
-    
-    
-    
-    
     public bool CanResolveNode(ResourceKey key)
     {
         return true;
@@ -36,7 +30,7 @@ public class StringResourceResolver: IResourceResolver<IStringResourceNode, Stri
 }
 
 
-public interface IStringResourceNode : IResourceNode
+public interface IStringResourceNode : IResourceNode<IStringResourceNode>
 {
     string Value { get; }
 }
@@ -45,7 +39,13 @@ public interface IStringResourceNode : IResourceNode
 
 public class LoadingStringResourceNode: IStringResourceNode
 {
+    
    public  string Value => throw new InvalidOperationException("Resource not loaded");
+
+   public IDisposable Subscribe(IResourceNodeObserver<IStringResourceNode> observer)
+   {
+       throw new NotImplementedException();
+   }
 }
 
 public class LoadedStringResourceNode(string value) : IStringResourceNode
